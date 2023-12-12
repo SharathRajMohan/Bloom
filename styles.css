@@ -520,7 +520,10 @@ footer .copyright p{
  #productdetails .single-pro-details span{
     line-height: 25px;
  }
-
+ #carousel{
+    width: 100%;
+    height: 20%;
+}
  /*Blog CSS*/
 
  #page-header .blog-header{
@@ -560,6 +563,66 @@ footer .copyright p{
     font-style: italic;
  }
 
+ /*ABout us*/
+ #page-header .about-header{
+    background-image: url("img/banner2.jpg");
+ }
+ #about-head{
+    display: flex;
+    align-items: center;
+ }
+ #about-head img{
+    width: 50%;
+    height: auto;
+ }
+ #about-head div{
+    padding-left: 40px;
+ }
+
+ /* contact page */
+ #contact-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+ #contact-details .details{
+    width: 40%;
+ }
+ #contact-details .details span,
+ #form-details form span{
+    font-size: 12px;
+ }
+ #contact-details .details h2,
+ #form-details form h2{
+    font-size: 26px;
+    line-height: 30px;
+    padding: 20px 0;
+ }
+ #contact-details .details h3{
+    font-size: 18px;
+    padding-bottom: 15px;
+ }
+ #contact-details .details li{
+    list-style: none;
+    display: flex;
+    padding: 10px 0;
+ }
+ #contact-details .details li i{
+    font-size: 14px;
+    padding-right: 22px;
+ }
+ #contact-details .details p{
+    font-size: 14px;
+    margin: 0;
+ }
+ #contact-details .map{
+    width: 55%;
+    /* height: 400px; */
+ }
+ /* #contact-details .map i{
+    width: 100%;
+    height: 100%;
+ } */
  #form-details{
     display: flex;
     justify-content: space-between;
@@ -609,105 +672,7 @@ footer .copyright p{
     color: #000;
  }
 
- /* Cart page  */
- #cart{
-    overflow-x: auto;
- }
- #cart table{
-    width: 100%;
-    border-collapse: collapse;
-    table-layout: fixed;
-    white-space: nowrap;
- }
- #cart table img{
-    width: 70px;
- }
- #cart table td:nth-child(1){
-    width: 100px;
-    text-align: center;
- }
- #cart table td:nth-child(2){
-    width: 150px;
-    text-align: center;
- }
- #cart table td:nth-child(3){
-    width: 250px;
-    text-align: center;
- }
- #cart table td:nth-child(4),
- #cart table td:nth-child(5),
- #cart table td:nth-child(6){
-    width: 150px;
-    text-align: center;
- }
- #cart table td:nth-child(5) input{
-    width: 70px;
-    padding: 10px;
- }
- #cart table thead{
-    border: 1px solid #c9cbce;
-    border-left: none;
-    border-right: none;
- }
- #cart table thead td{
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 15px;
-    padding: 16px 0;
- }
- #cart table tbody tr td{
-    padding-top: 15px;
- }
- #cart table tbody td{
-    font-size: 16px;
- }
- #cart-add{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
- }
-#coupon{
-    width: 50%;
-    margin-bottom: 30px;
-}
-#coupon h3,
-#subtotal h3{
-    padding-bottom: 15px;
-}
-#coupon input{
-    padding: 10px 20px;
-    outline: none;
-    width: 60%;
-    margin-right: 10px;
-    border: 1px solid #c9cbce;
-}
-#coupon button,
-#subtotal button{
-    background-color: #088178;
-    color: #fff;
-    padding: 12px 20px; 
-}
-#subtotal{
-    width: 50%;
-    margin-bottom: 30px;
-    border: 1px solid #c9cbce;
-    padding: 30px;
-}
-#subtotal table{
-    border-collapse: collapse;
-    width: 100%;
-    margin-bottom: 20px;
-}
-#subtotal table td{
-    width: 50%;
-    border: 1px solid #c9cbce;
-    padding: 10px;
-    font-size: 15px;
-}
-#carousel{
-    width: 100%;
-    height: 20%;
-}
+
 
 /*Responsive Mobile design */
 @media (max-width:799px){
@@ -780,7 +745,32 @@ footer .copyright p{
     /* #productdetails{
         flex-wrap: wrap;
     } */
-   
+    /* contact page */
+    #form-details{
+        padding: 30px;
+    }
+    #form-details form {
+        width: 50% ;
+    }
+    #contact-details .map iframe{
+        width: auto;
+        
+    }
+    /* contact page */
+    #contact-details,
+    #form-details {
+        flex-direction: column;
+    }
+    #contact-details .details,
+    #contact-details .map,
+    #contact-details .map iframe,
+    #form-details form {
+        width: 100% ;
+    }
+    #form-details,
+    #form-details .people{
+        padding: 10px ;
+    }
     
 }
 
@@ -881,5 +871,5 @@ footer .copyright p{
     #about-head div{
         padding-left: 0px;
     }
-   
+    
 }
