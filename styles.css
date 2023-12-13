@@ -4,9 +4,9 @@
     box-sizing: border-box;
     font-family: 'Spartan', sans-serif;
 }
-a{
+/* a{
     text-decoration: none;
-}
+} */
 h1{
     font-size: 50px;
     line-height: 64px;
@@ -204,6 +204,7 @@ body{
 #product1 .pro-container{
     display: flex;
     flex-wrap: wrap;
+    /* overflow-x: auto; */
     justify-content: space-between;
     padding-top: 20px;
 }
@@ -218,6 +219,7 @@ body{
 }
 #product1 .pro img{
     width: 100%;
+    height: 224px;
     border-radius: 20px;
     /* height: 350px; */
 }
@@ -328,7 +330,7 @@ body{
     border: 1px solid #088178;
 }
 #sm-banner .banner-box2{
-    background-image: url("img/banners/b11.jpg");
+    background-image: url("img/banners/ban1.jpg");
 }
 #newsletter{
     display: flex;
@@ -443,6 +445,7 @@ footer .copyright p{
 }
 
 /*Shop page CSS*/
+
 #page-header{
     background-image: url("img/banner2.jpg");
     width: 100%;
@@ -477,6 +480,9 @@ footer .copyright p{
     width: 50%;
     margin-right: 50px;
 }
+/* #productdetails .single-pro-image img{
+    width: 40%;
+} */
 .small-img-group{
     display: flex;
     justify-content: space-between;
@@ -523,8 +529,8 @@ footer .copyright p{
 
  /*Blog CSS*/
 
- #page-header .blog-header{
-    background-image: url("img/banner2.jpg");
+ #page-header.blog-header{
+    background-image: url("img/blogban.jpg") ;
  }
  
  #blog {
@@ -575,8 +581,39 @@ footer .copyright p{
  #about-head div{
     padding-left: 40px;
  }
+ #about-people .people{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+ #about-people .people div{
+    display: flex;
+    padding: 25px;
+    align-items: flex-start;
+ }
+ #about-people .people div img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    margin-right: 15px;
+ }
+ #about-people .people div p{
+    margin: 0;
+    font-size: 15px;
+    line-height: 24px;
+
+ }
+ #about-people .people div p span{
+    display: block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000;
+ }
 
  /* contact page */
+ #page-header.contact-header{
+    background-image: url("img/contactban.jpg") ;
+ }
  #contact-details{
     display: flex;
     align-items: center;
@@ -632,6 +669,7 @@ footer .copyright p{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    margin: auto;
  }
  #form-details form input,
  #form-details form textarea{
@@ -645,31 +683,12 @@ footer .copyright p{
     background-color: #088178;
     color: #fff;
  }
- #form-details .people div{
-    display: flex;
-    padding-bottom: 25px;
-    align-items: flex-start;
- }
- #form-details .people div img{
-    width: 70px;
-    height: 70px;
-    object-fit: cover;
-    margin-right: 15px;
- }
- #form-details .people div p{
-    margin: 0;
-    font-size: 15px;
-    line-height: 24px;
-
- }
- #form-details .people div p span{
-    display: block;
-    font-size: 18px;
-    font-weight: 600;
-    color: #000;
- }
+ 
 
  /* Cart page  */
+ #page-header.cart-header{
+    background-image: url("img/cartban.jpg") ;
+ }
  #cart{
     overflow-x: auto;
  }
@@ -863,7 +882,7 @@ footer .copyright p{
         width: 100% ;
     }
     #form-details,
-    #form-details .people{
+    #about-people .people{
         padding: 10px ;
     }
     
@@ -893,10 +912,6 @@ footer .copyright p{
         width: 155px;
         margin: 0 10px 15px 0;
     }
-    .footer-div .install img {
-        margin: 10px 0 15px 0;
-        width: 250px ;
-    }
     #sm-banner{
         justify-content: center;
     }
@@ -923,8 +938,9 @@ footer .copyright p{
         height: 40px;
     }
     .footer-div .install img{
+        margin: 10px 0 15px 0;
         width: 300px;
-        height: 40px;
+        height: 60px;
     }
     .small-img-group{
         flex-wrap: wrap;

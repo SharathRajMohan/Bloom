@@ -12,7 +12,7 @@
 </head>
 <body>
     <section id="header">
-        <a href="#"><img src="img/logo.png" class="logo" alt="main logo"></a>
+        <a href="index.html"><img src="img/logo.png" class="logo" alt="main logo"></a>
         <div>
             <ul id="navbar">
                 <li><a href="index.html" id="homeLink">Home</a></li>
@@ -20,22 +20,22 @@
                 <li><a href="blog.html" id="blogLink">Blog</a></li>
                 <li><a href="about.html" id="aboutLink">About us</a></li>
                 <li><a href="contact.html" id="contactLink">Contact Us</a></li>
-                <li id="main-bag"><a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a></li>
+                <li id="main-bag"><a href="cart.html" class="cartAIcon"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a></li>
                 <a href="#" id="close"><i class="fa fa-times"></i></a>
             </ul>
             <div id="mobile">
-                <a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>
+                <a href="cart.html" class="cartAIcon"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>
                 <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>
             </div>
         </div>
     </section>
     
-    <section id="page-header" class="about-header">
-      <h2>#lets_checkout</h2>
+    <section id="page-header" class="cart-header">
+      <h2>#lets__checkout</h2>
       <p>make your days beatiful with bloom</p>
     </section>
 
-      <section id="cart" class="section-p1">
+      <!-- <section id="cart" class="section-p1">
         <table width="100%">
           <thead>
             <tr>
@@ -75,9 +75,9 @@
           </thead>
         </table>
 
-      </section>
+      </section> -->
 
-      <section id="cart-add" class="section-p1">
+      <!-- <section id="cart-add" class="section-p1">
         <div  id="coupon">
           <h3>Apply Coupon</h3>
           <div>
@@ -103,8 +103,54 @@
           </table>
           <button class="normal">Proceed to checkout</button>
         </div>
+      </section> -->
+
+      <section id="cart" class="section-p1">
+        <table width="100%">
+          <thead>
+            <tr>
+              <td>Remove</td>
+              <td>Image</td>
+              <td>Product</td>
+              <td>Price</td>
+              <td>Quantity</td>
+              <td>Subtotal</td>
+            </tr>
+          </thead>
+          <tbody id="cart-table-body">
+            <!-- Cart items will be dynamically added here -->
+          </tbody>
+        </table>
       </section>
-    <footer class="section-p1">
+    
+      <section id="cart-add" class="section-p1">
+        <div id="coupon">
+          <h3>Apply Coupon</h3>
+          <div>
+            <input type="text" placeholder="Enter coupon code">
+            <button class="normal">Apply</button>
+          </div>
+        </div>
+        <div id="subtotal">
+          <h3>Cart Total</h3>
+          <table>
+            <tr>
+              <td>Cart subtotal</td>
+              <td id="subtotal-amount">$0.00</td>
+            </tr>
+            <tr>
+              <td>Shipping</td>
+              <td id="ship-amount">$0.00</td>
+            </tr>
+            <tr>
+              <td><Strong>Total</Strong></td>
+              <td id="total-amount">$0.00</td>
+            </tr>
+          </table>
+          <button class="normal">Proceed to checkout</button>
+        </div>
+      </section>
+      <footer class="section-p1">
         <div class="footer-div">
         <div class="col">
           <img src="img/logo.png" class="logo" alt="main logo">
@@ -124,19 +170,19 @@
         </div>
         <div class="col">
           <h4>About</h4>
-          <a href="#">About us</a>
+          <a href="about.html">About us</a>
           <a href="#">Delivery Information</a>
           <a href="#">Privacy Policy</a>
           <a href="#">Terms & COnditions</a>
-          <a href="#">Contact us</a>
+          <a href="contact.html">Contact us</a>
         </div>
         <div class="col">
           <h4>My Account</h4>
           <a href="#">Sign In</a>
-          <a href="#">View Cart</a>
+          <a href="cart.html">View Cart</a>
           <a href="#">My Wishlist</a>
           <a href="#">Track Order</a>
-          <a href="#">Help</a>
+          <a href="contact.html">Help</a>
         </div>
         <div class="col install">
           <h4>Install App</h4>
