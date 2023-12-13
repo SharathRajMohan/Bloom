@@ -13,7 +13,7 @@
 <body>
   <!-- Header -->
   <section id="header">
-    <a href="#"><img src="img/logo.png" class="logo" alt="main logo"> </a>
+    <a href="index.html"><img src="img/logo.png" class="logo" alt="main logo"> </a>
     <div>
         <ul id="navbar">
             <li><a href="index.html">Home</a></li>
@@ -31,117 +31,24 @@
     </div>
   </section>
 
+
   <section id="productdetails" class="section-p1">
     <div class="single-pro-image">
-        <img src="img/products/pro1.jpeg" width="100%" id="main" alt="">
-
-        <div class="small-img-group">
-            <div class="small-img-col">
-                <img src="img/products/pro1.jpeg" class="small-img" alt="">
-            </div>
-            <div class="small-img-col">
-                <img src="img/products/pro1.jpeg" class="small-img" alt="">
-            </div>
-            <div class="small-img-col">
-                <img src="img/products/pro1.jpeg" class="small-img" alt="">
-            </div>
-            <div class="small-img-col">
-                <img src="img/products/pro1.jpeg" class="small-img" alt="">
-            </div>
-        </div>
+        <img src="" width="100%" id="mainImg" alt="">
+        <!-- <div class="small-img-group">             
+        </div> -->
     </div>
-
     <div class="single-pro-details">
-        <h6>Shirt / T-Shirt</h6>
-        <h4>Fashion Tshirt</h4>
-        <h2>$139.00</h2>
-        <select>
-            <option>Select Size</option>
-            <option>Small</option>
-            <option>Medium</option>
-            <option>Large</option>
-            <option>X-Large</option>
-        </select>
-        <input type="number" value="1">
-        <button class="normal">Add to cart</button>
-        <h4>Product details</h4>
-        <span>
-            A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.
-        </span>
+        <!-- Product details will be dynamically added here -->
     </div>
-  </section>
+</section>
 
-  <section id="product1" class="section-p1">
-    <h2>New Collection</h2>
-    <p>Winter Collection New Models.</p>
-    <div class="pro-container">
-      
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+  <p>Winter Collection New Models.</p>
+  <div id="productContainer" class="pro-container"></div>
+</section>
 
-      <div class="pro">
-        <img class="pro-img" src="img/products/pro1.jpeg" alt="product 1">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Some name 1</h5>
-          <div class="star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-          </div>
-          <h4>$78</h4>
-        </div>
-        <a href="#"><i class="fa fa-shopping-cart  cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <img class="pro-img" src="img/products/pro1.jpeg" alt="product 1">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Some name 1</h5>
-          <div class="star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-          </div>
-          <h4>$78</h4>
-        </div>
-        <a href="#"><i class="fa fa-shopping-cart  cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <img class="pro-img" src="img/products/pro1.jpeg" alt="product 1">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Some name 1</h5>
-          <div class="star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-          </div>
-          <h4>$78</h4>
-        </div>
-        <a href="#"><i class="fa fa-shopping-cart  cart"></i></a>
-      </div>
-
-      <div class="pro">
-        <img class="pro-img" src="img/products/pro1.jpeg" alt="product 1">
-        <div class="des">
-          <span>Adidas</span>
-          <h5>Some name 1</h5>
-          <div class="star">
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-              <i class="fa fa-star"></i>
-          </div>
-          <h4>$78</h4>
-        </div>
-        <a href="#"><i class="fa fa-shopping-cart  cart"></i></a>
-      </div>
-    </div>
-  </section>
   <!-- newsletter section -->
   <section id="newsletter" class="section-p1 section-m1" >
     <div class="newstext">
@@ -174,19 +81,19 @@
     </div>
     <div class="col">
       <h4>About</h4>
-      <a href="#">About us</a>
+      <a href="about.html">About us</a>
       <a href="#">Delivery Information</a>
       <a href="#">Privacy Policy</a>
       <a href="#">Terms & COnditions</a>
-      <a href="#">Contact us</a>
+      <a href="contact.html">Contact us</a>
     </div>
     <div class="col">
       <h4>My Account</h4>
       <a href="#">Sign In</a>
-      <a href="#">View Cart</a>
+      <a href="cart.html">View Cart</a>
       <a href="#">My Wishlist</a>
       <a href="#">Track Order</a>
-      <a href="#">Help</a>
+      <a href="contact.html">Help</a>
     </div>
     <div class="col install">
       <h4>Install App</h4>
@@ -203,25 +110,7 @@
       <p>&copy 2023. Bloom: Online Fashion and Lifestyle - All rights reserved.</p>
     </div>
   </footer>
-  <!-- JavaScript -->
 
-  <script>
-    var mainImg =document.getElementById("main");
-    var smallImg =document.getElementsByClassName('small-img');
-    smallImg[0].onclick = function(){
-        main.src = smallImg[0].src;
-    }
-    smallImg[1].onclick = function(){
-        main.src = smallImg[1].src;
-    }
-    smallImg[2].onclick = function(){
-        main.src = smallImg[2].src;
-    }
-    smallImg[3].onclick = function(){
-        main.src = smallImg[3].src;
-    }
-  </script>
-  <script src="products.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
