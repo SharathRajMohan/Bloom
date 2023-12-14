@@ -27,7 +27,7 @@ const jsonData = [
     name: "Grey Shirt",
     stars: 4,
     price: "$50",
-    image: "img/products/pro3.jpg",
+    image: "img/products/pro3.JPG",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -38,7 +38,7 @@ const jsonData = [
     name: "Red Sweatshirt",
     stars: 4,
     price: "$20",
-    image: "img/products/pro4.jpg",
+    image: "img/products/pro4.JPG",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -49,7 +49,7 @@ const jsonData = [
     name: "Sunflower Sweatshirt",
     stars: 4,
     price: "$35",
-    image: "img/products/pro5.jpg",
+    image: "img/products/pro5.JPG",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -71,7 +71,7 @@ const jsonData = [
     name: "Mountain Sweatshirt",
     stars: 4,
     price: "$25",
-    image: "img/products/pro7.jpg",
+    image: "img/products/pro7.JPG",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -82,29 +82,7 @@ const jsonData = [
     name: "White Hoodie",
     stars: 4,
     price: "$35",
-    image: "img/products/pro8.jpg",
-    quantity: 1,
-    description:
-      "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
-  },
-  {
-    id: "product9",
-    brand: "Bloom",
-    name: "Planets Sweatshirt",
-    stars: 4,
-    price: "$35",
-    image: "img/products/pro9.jpg",
-    quantity: 1,
-    description:
-      "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
-  },
-  {
-    id: "product10",
-    brand: "Bloom",
-    name: "Flower Hoodie",
-    stars: 4,
-    price: "$50",
-    image: "img/products/pro10.jpg",
+    image: "img/products/pro8.JPG",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -493,7 +471,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // function to initially set the active class
 });
 
-if (window.location.pathname.includes("index.html")) {
+if (window.location.pathname.includes("home.html")) {
   // redirect to shop functionality
   let homeButton1 = document.getElementById("homeButton");
   homeButton1.addEventListener("click", redirectToPage);
