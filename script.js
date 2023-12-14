@@ -27,7 +27,7 @@ const jsonData = [
     name: "Grey Shirt",
     stars: 4,
     price: "$50",
-    image: "img/products/pro3.JPG",
+    image: "img/products/pro3.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -38,7 +38,7 @@ const jsonData = [
     name: "Red Sweatshirt",
     stars: 4,
     price: "$20",
-    image: "img/products/pro4.JPG",
+    image: "img/products/pro4.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -49,7 +49,7 @@ const jsonData = [
     name: "Sunflower Sweatshirt",
     stars: 4,
     price: "$35",
-    image: "img/products/pro5.JPG",
+    image: "img/products/pro5.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -71,7 +71,7 @@ const jsonData = [
     name: "Mountain Sweatshirt",
     stars: 4,
     price: "$25",
-    image: "img/products/pro7.JPG",
+    image: "img/products/pro7.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -82,7 +82,7 @@ const jsonData = [
     name: "White Hoodie",
     stars: 4,
     price: "$35",
-    image: "img/products/pro8.JPG",
+    image: "img/products/pro8.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -93,7 +93,7 @@ const jsonData = [
     name: "Planets Sweatshirt",
     stars: 4,
     price: "$35",
-    image: "img/products/pro9.JPG",
+    image: "img/products/pro9.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
@@ -104,59 +104,55 @@ const jsonData = [
     name: "Flower Hoodie",
     stars: 4,
     price: "$50",
-    image: "img/products/pro10.JPG",
+    image: "img/products/pro10.jpg",
     quantity: 1,
     description:
       "A shirt is a piece of clothing that you wear on the upper part of your body. Shirts have a collar, sleeves, and buttons down the front. 2. See also dress shirt, stuffed shirt, sweatshirt, T-shirt. Collins COBUILD Advanced Learner's Dictionary.",
   },
   // ... (similar entries for other products)
 ];
-
-//var singleProdJson = [];
 var cartJson = [];
-// let cartCounter = 0; // Counter to keep track of the items added to the cart
-const bar = document.getElementById("bar");
-const nav = document.getElementById("navbar");
-const close = document.getElementById("close");
-
-if (bar) {
-  bar.addEventListener("click", () => {
-    nav.classList.add("active");
-  });
-}
-
-if (close) {
-  close.addEventListener("click", () => {
-    nav.classList.remove("active");
-  });
-}
 
 document.addEventListener("DOMContentLoaded", function () {
+  const bar = document.getElementById("bar");
+  const nav = document.getElementById("navbar");
+  const close = document.getElementById("close");
+
+  if (bar) {
+    bar.addEventListener("click", () => {
+      nav.classList.add("active");
+    });
+  }
+
+  if (close) {
+    close.addEventListener("click", () => {
+      nav.classList.remove("active");
+    });
+  }
+
   let cartJson = JSON.parse(localStorage.getItem("cartJson")) || [];
   let cartCounterIn = localStorage.getItem("cartCounter") || 0;
   function initializeCart() {
     // Retrieve the cart counter from localStorage
     let cartCounterIn = localStorage.getItem("cartCounter") || 0;
+    let cartCounterElement = document.getElementById("main-bag");
+    let mobileCounterElement = document.getElementById("mobile-cart");
     // Update the cart counter on the page
     if (cartCounterIn > 0) {
-      let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
       cartCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${cartCounterIn}`;
-      mobileCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${cartCounterIn}
-            <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${cartCounterIn}`;
     } else {
       // If cartCounterIn is 0, hide the cart counter
-      let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
+
       cartCounterElement.innerHTML = `<a href="cart.html" ><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>`;
-      mobileCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>
-            <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>`;
     }
   }
   window.onload = function () {
     updateActiveClass();
     initializeCart();
   };
+
   function getCartJsonFromStorage() {
     const cartStoreJson = localStorage.getItem("cartJson");
     console.log("function cart json " + cartStoreJson);
@@ -188,17 +184,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update the cart counter on the page only if totalQuantity is greater than 0
     if (totalQuantity > 0) {
       let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
+      let mobileCounterElement = document.getElementById("mobile-cart");
       cartCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${totalQuantity}`;
-      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${totalQuantity}
-        <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${totalQuantity}`;
     } else {
       // If totalQuantity is 0, hide the cart counter
       let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
+      let mobileCounterElement = document.getElementById("mobile-cart");
       cartCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>`;
-      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>
-        <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>`;
     }
     localStorage.setItem("cartCounter", totalQuantity);
     console.log("remove function " + localStorage.getItem("cartJson"));
@@ -235,17 +229,15 @@ document.addEventListener("DOMContentLoaded", function () {
     // Update the cart counter on the page
     if (totalQuantity > 0) {
       let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
+      let mobileCounterElement = document.getElementById("mobile-cart");
       cartCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${totalQuantity}`;
-      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${totalQuantity}
-            <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${totalQuantity}`;
     } else {
       // If totalQuantity is 0, hide the cart counter
       let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
+      let mobileCounterElement = document.getElementById("mobile-cart");
       cartCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>`;
-      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>
-            <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html" class="active"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>`;
     }
 
     localStorage.setItem("cartJson", JSON.stringify(cartJson));
@@ -265,8 +257,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let selectedProduct = [];
 
-  //var mainImg = document.getElementById("main");
-  //var smallImgGroup = document.querySelector('.small-img-group');
   var singleProDetails = document.querySelector(".single-pro-details");
 
   function getSelectedProductFromStorage() {
@@ -290,12 +280,11 @@ document.addEventListener("DOMContentLoaded", function () {
       // Increment the cart counter
       cartCounterIn++;
       let cartCounterElement = document.getElementById("main-bag");
-      let mobileCounterElement = document.getElementById("mobile");
+      let mobileCounterElement = document.getElementById("mobile-cart");
       // to update the number displayed in the top right corner of the cart icon
       cartCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${cartCounterIn}`;
 
-      mobileCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${cartCounterIn}
-      <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>`;
+      mobileCounterElement.innerHTML = `<a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a>${cartCounterIn}`;
       const existingCartItem = cartJson.find((item) => item.id === productId);
       if (existingCartItem) {
         // If the product exists, increase the quantity
@@ -309,7 +298,6 @@ document.addEventListener("DOMContentLoaded", function () {
       localStorage.setItem("cartCounter", cartCounterIn);
       localStorage.setItem("cartJson", JSON.stringify(cartJson));
       // You can also implement additional logic here, such as adding the selected product to the shopping cart
-      //copyDataToSelectedProduct(productId);
     }
 
     function copyDataToSelectedProduct(productId) {
@@ -395,7 +383,7 @@ document.addEventListener("DOMContentLoaded", function () {
           <option>Large</option>
           <option>X-Large</option>
       </select>
-      <input type="number" value="1">
+      <input type="number" value="1" min="1">
       <button  id="spAddCart" class="normal">Add to cart</button>
       <h4>Product details</h4>
       <span>${selectedProductJson.description}</span>
@@ -503,8 +491,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // function to initially set the active class
-
-  displayCart();
 });
 
 if (window.location.pathname.includes("index.html")) {
