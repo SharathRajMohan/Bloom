@@ -28,7 +28,7 @@ function handleLogin(username, password) {
   );
 
   if (user) {
-    window.location.href = "index.html";
+    window.location.href = "home.html";
   } else {
     alert("Invalid username or password");
   }

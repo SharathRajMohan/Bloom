@@ -1,139 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA_Compatible" content="IE=Edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
-
-    <title>Bloom: Online Fashion and Lifestyle</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+  <link rel="stylesheet" href="login.css">
 </head>
 <body>
-  <!-- Header -->
-  <section id="header">
-    <a href="index.html"><img src="img/logo.png" class="logo" alt="main logo"></a>
-    <div>
-        <ul id="navbar">
-            <li><a href="index.html" id="homeLink">Home</a></li>
-            <li><a href="shop.html" id="shopLink">Shop</a></li>
-            <li><a href="blog.html" id="blogLink">Blog</a></li>
-            <li><a href="about.html" id="aboutLink">About us</a></li>
-            <li><a href="contact.html" id="contactLink">Contact Us</a></li>
-            <li id="main-bag"><a href="cart.html" ><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a></li>
-            <a href="#" id="close"><i class="fa fa-times"></i></a>
-        </ul>
-        <div id="mobile">
-            <span id="mobile-cart"><a href="cart.html"><img src="img/cartIcon.png" class="cartIcon" alt="Bag Icon"></a></span>
-            <i id="bar" class="fa fa-outdent" style="font-size:36px;"></i>
+  <div id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <div class="inputTags">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
         </div>
+      <div class="inputTags">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
     </div>
-</section>
-
-  <!-- Hero -->
-  <section id="hero">
-    <h4>Trade-in-offer</h4>
-    <h2>Super value deals</h2>
-    <h1>On all <span>products</span></h1>
-    <p>Save more with coupons upto 60% off!!</p>
-    <button id="homeButton">Show Now</button>
-  </section>
-  
- <!-- Products2 -->
-  <section id="product1" class="section-p1">
-    <h2>Featured Products</h2>
-    <p>Winter Collection New Models.</p>
-    <div id="productContainer" class="pro-container"></div>
-</section>
-  <!-- banner -->
-  <section id="banner" class="section-m1">
-    <h4>Repair Services </h4>
-    <h2>Upto <span>70% Off</span> - All t-shirts & hoodies</h2>
-    <button class="normal">Explore More</button>
-  </section>
-  
-  <!-- Second Banner Section -->
-  <section id="sm-banner" class="section-m1">
-    <div class="banner-box">
-      <h4>Crazy deals</h4>
-      <h2>Buy 1 get 1 free!!</h2>
-      <span>The best classic dresses are on sale at Bloom</span>
-      <button id="homeButton3" class="white">See More</button>
-    </div>
-    <div class="banner-box banner-box2">
-      <h4>Summer/Spring</h4>
-      <h2>Curent Season</h2>
-      <span>Now make your spring/summer a memorable one</span>
-      <button id="homeButton2" class="white">Browse</button>
-    </div>
-  </section>
-  <!-- newsletter section -->
-  <section id="newsletter" class="section-p1 section-m1" >
-    <div class="newstext">
-      <h2>Sign up Newletters</h2>
-      <p>Get E-mail updates for latest offers and promotions !!!</p>
-    </div>
-    <div class="form">
-      <input type="email" placeholder="enter your email address">
-      <button class="normal">Sign Up</button>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="section-p1">
-    <div class="footer-div">
-    <div class="col">
-      <img src="img/logo.png" class="logo" alt="main logo">
-      <h4>Contact Us</h4>
-      <p><strong>Address: </strong>265 Yorkland Blvd #400, North York, ON M2J 1S5</p>
-      <p> <a href="tel:+14375570236"><strong>Phone: </strong>+1 4375570236</p></a>
-      <p> <a href="mailto:harsh@rcsh.com"><strong>Email Us: </strong>harsh@rcsh.com</p></a>
-      <div class="follow">
-        <h4>Follow us</h4>
-        <div class="icon">
-          <i class="fa fa-facebook"></i>
-          <i class="fa fa-twitter"></i>
-          <i class="fa fa-instagram"></i>
-          <i class="fa fa-pinterest"></i>
-          <i class="fa fa-youtube"></i>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <h4>About</h4>
-      <a href="about.html">About us</a>
-      <a href="#">Delivery Information</a>
-      <a href="#">Privacy Policy</a>
-      <a href="#">Terms & COnditions</a>
-      <a href="contact.html">Contact us</a>
-    </div>
-    <div class="col">
-      <h4>My Account</h4>
-      <a href="#">Sign In</a>
-      <a href="cart.html">View Cart</a>
-      <a href="#">My Wishlist</a>
-      <a href="#">Track Order</a>
-      <a href="contact.html">Help</a>
-    </div>
-    <div class="col install">
-      <h4>Install App</h4>
-      <a href="#">From <b>App Store</b> or <b>Google Playstore</b></a>
-      <div class="pay-icons">
-        <img src="img/pay/app.png" alt="Apple Store Icon">
-        <img src="img/pay/play.png" alt="Google Playstore icon">
-      </div>
-      <p>Secured Payment Gateway</p>
-      <img src="img/pay/pay.png" alt="pay option image">
-    </div>
+        <button type="submit" class="normal" >Login</button>
+        <button type="button" class="notNormal" onclick="showSignup()">Sign Up</button>
+      
+      
+    </form>
   </div>
-    <div class="copyright">
-      <p>&copy 2023. Bloom: Online Fashion and Lifestyle - All rights reserved.</p>
+
+  <div id="signup-container" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+        <div class="inputTags">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required>
     </div>
-  </footer>
-  <!-- JavaScript -->
-  
-  <script defer src="script.js"></script>
-  <!-- <script src="test.js"></script> -->
+      <div class="inputTags">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required>
+    </div>
+      <div class="inputTags">
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" required>
+    </div>
+      <div class="inputTags">
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" required>
+    </div>
+      <button type="submit" class="normal" >Sign Up</button>
+      <button type="button" class="notNormal" onclick="showLogin()">Login</button>
+      
+    </form>
+  </div>
+
+  <script src="login.js"></script>
 </body>
 </html>
