@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login and Signup</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div id="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+        <div class="inputTags">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required>
+        </div>
+      <div class="inputTags">
+      <label for="password">Password:</label>
+      <input type="password" id="password" required>
+    </div>
+        <button type="submit" class="normal" >Login</button>
+        <button type="button" class="notNormal" onclick="showSignup()">Sign Up</button>
+      
+      
+    </form>
+  </div>
+
+  <div id="signup-container" style="display: none;">
+    <h2>Sign Up</h2>
+    <form id="signup-form">
+        <div class="inputTags">
+      <label for="firstName">First Name:</label>
+      <input type="text" id="firstName" required>
+    </div>
+      <div class="inputTags">
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" required>
+    </div>
+      <div class="inputTags">
+      <label for="newUsername">Username:</label>
+      <input type="text" id="newUsername" required>
+    </div>
+      <div class="inputTags">
+      <label for="newPassword">Password:</label>
+      <input type="password" id="newPassword" required>
+    </div>
+      <button type="submit" class="normal" >Sign Up</button>
+      <button type="button" class="notNormal" onclick="showLogin()">Login</button>
+      
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
